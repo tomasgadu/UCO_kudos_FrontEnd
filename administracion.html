@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>UCO Kudos - Administración</title>
+  <link rel="stylesheet" href="css/estilos.css">
+</head>
+<body>
+  <header>
+    <h1>UCO Kudos</h1>
+    <nav id="menu"></nav>
+  </header>
+
+  <main>
+    <div id="mensaje" class="mensaje oculto"></div>
+
+    <section id="seccionCategorias" class="tarjeta oculto">
+      <h2>Categorías</h2>
+      <form id="formCategoria">
+        <input type="hidden" id="idCategoria">
+        <label for="nombreCategoria">Nombre</label>
+        <input type="text" id="nombreCategoria" required>
+        <label for="descripcionCategoria">Descripción</label>
+        <textarea id="descripcionCategoria" required></textarea>
+        <button type="submit" id="botonCategoria">Crear categoría</button>
+        <button type="button" id="botonCancelar" class="secundario oculto">Cancelar edición</button>
+      </form>
+      <h3>Categorías registradas</h3>
+      <table>
+        <thead><tr><th>Nombre</th><th>Descripción</th><th>Estado</th><th>Acciones</th></tr></thead>
+        <tbody id="tablaCategorias"></tbody>
+      </table>
+    </section>
+
+    <section id="seccionFacultades" class="tarjeta oculto">
+      <h2>Facultades</h2>
+      <form id="formFacultad" class="formulario-linea">
+        <input type="text" id="nombreFacultad" placeholder="Nombre de la facultad" required>
+        <button type="submit">Registrar facultad</button>
+      </form>
+      <table>
+        <thead><tr><th>Nombre</th><th>Estado</th><th>Creación</th></tr></thead>
+        <tbody id="tablaFacultades"></tbody>
+      </table>
+    </section>
+
+    <section id="seccionProgramas" class="tarjeta oculto">
+      <h2>Programas académicos</h2>
+      <form id="formPrograma" class="formulario-linea">
+        <input type="text" id="nombrePrograma" placeholder="Nombre del programa" required>
+        <select id="facultadPrograma" required></select>
+        <button type="submit">Registrar programa</button>
+      </form>
+      <table>
+        <thead><tr><th>Nombre</th><th>Facultad</th><th>Estado</th></tr></thead>
+        <tbody id="tablaProgramas"></tbody>
+      </table>
+    </section>
+  </main>
+
+  <script src="js/sesion.js"></script>
+  <script src="js/api.js"></script>
+  <script src="js/ui.js"></script>
+  <script src="js/menu.js"></script>
+  <script src="js/administracion.js"></script>
+</body>
+</html>
