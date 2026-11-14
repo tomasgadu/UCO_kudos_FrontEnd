@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>UCO Kudos - Iniciar sesión</title>
+  <link rel="stylesheet" href="css/estilos.css">
+</head>
+<body>
+  <header>
+    <h1>UCO Kudos</h1>
+  </header>
+
+  <main>
+    <section class="tarjeta angosta">
+      <h2>Iniciar sesión</h2>
+      <form id="formLogin">
+        <label for="correo">Correo institucional</label>
+        <input type="email" id="correo" placeholder="nombre.apellido@uco.edu.co" required>
+
+        <label for="clave">Contraseña</label>
+        <input type="password" id="clave" required>
+
+        <button type="submit">Ingresar</button>
+      </form>
+      <div id="mensaje" class="mensaje oculto"></div>
+      <p class="ayuda">¿No tienes cuenta? <a href="registro.html">Regístrate</a></p>
+    </section>
+  </main>
+
+  <script src="js/sesion.js"></script>
+  <script src="js/api.js"></script>
+  <script src="js/ui.js"></script>
+  <script src="js/login.js"></script>
+</body>
+</html>

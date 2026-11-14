@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>UCO Kudos - Registro</title>
+  <link rel="stylesheet" href="css/estilos.css">
+</head>
+<body>
+  <header>
+    <h1>UCO Kudos</h1>
+    <nav><a href="index.html">Iniciar sesión</a></nav>
+  </header>
+
+  <main>
+    <section class="tarjeta">
+      <h2>1. Registrarse</h2>
+      <form id="formRegistro">
+        <label for="nombres">Nombres</label>
+        <input type="text" id="nombres" required>
+
+        <label for="apellidos">Apellidos</label>
+        <input type="text" id="apellidos" required>
+
+        <label for="correo">Correo institucional</label>
+        <input type="email" id="correo" placeholder="nombre.apellido@uco.edu.co" required>
+
+        <label for="celular">Número celular (+57)</label>
+        <input type="text" id="celular" placeholder="3001234567" maxlength="10" required>
+
+        <label for="clave">Contraseña</label>
+        <input type="password" id="clave" required>
+        <p class="ayuda">Debe tener mayúscula, minúscula y número.</p>
+
+        <label for="rol">Rol</label>
+        <select id="rol" required></select>
+
+        <div id="grupoFacultad" class="oculto">
+          <label for="facultad">Facultad</label>
+          <select id="facultad"></select>
+        </div>
+
+        <div id="grupoPrograma" class="oculto">
+          <label for="programa">Programa académico</label>
+          <select id="programa"></select>
+        </div>
+
+        <button type="submit">Registrarme</button>
+      </form>
+      <div id="mensajeRegistro" class="mensaje oculto"></div>
+    </section>
+
+    <section class="tarjeta">
+      <h2>2. Verificar correo y celular</h2>
+      <p class="ayuda">Después de registrarte, verifica tu correo y tu celular con el código de 6 dígitos que te llegó.
+        Tu cuenta se activa cuando la solicitud esté aprobada y ambos datos estén verificados.</p>
+      <form id="formVerificacion">
+        <label for="correoVerificacion">Correo institucional</label>
+        <input type="email" id="correoVerificacion" required>
+
+        <label for="tipo">Qué vas a verificar</label>
+        <select id="tipo">
+          <option value="CORREO">Correo</option>
+          <option value="CELULAR">Celular</option>
+        </select>
+
+        <label for="codigo">Código</label>
+        <input type="text" id="codigo" maxlength="6">
+
+        <button type="submit">Verificar</button>
+        <button type="button" id="botonReenviar" class="secundario">Reenviar código</button>
+      </form>
+      <div id="mensajeVerificacion" class="mensaje oculto"></div>
+    </section>
+  </main>
+
+  <script src="js/sesion.js"></script>
+  <script src="js/api.js"></script>
+  <script src="js/ui.js"></script>
+  <script src="js/registro.js"></script>
+</body>
+</html>
