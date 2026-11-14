@@ -235,3 +235,8 @@ th {
 .formulario-linea label {
   margin: 0;
 }
+
+.separador {
+  text-align: center;
+  margin: 12px 0;
+}
