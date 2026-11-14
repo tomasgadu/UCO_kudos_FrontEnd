@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>UCO Kudos - Moderación</title>
+  <link rel="stylesheet" href="css/estilos.css">
+</head>
+<body>
+  <header>
+    <h1>UCO Kudos</h1>
+    <nav id="menu"></nav>
+  </header>
+
+  <main>
+    <section class="tarjeta">
+      <h2>Reportes de contenido</h2>
+      <div class="formulario-linea">
+        <label for="filtroEstado">Estado</label>
+        <select id="filtroEstado">
+          <option value="">Todos</option>
+          <option value="PENDIENTE" selected>Pendientes</option>
+          <option value="EN_REVISION">En revisión</option>
+          <option value="ACEPTADO">Aceptados</option>
+          <option value="RECHAZADO">Rechazados</option>
+        </select>
+      </div>
+      <p class="ayuda">Flujo: Pendiente → Tomar en revisión → Aceptar (la publicación queda vetada) o Rechazar (vuelve a estar visible).</p>
+      <div id="mensaje" class="mensaje oculto"></div>
+    </section>
+    <div id="lista"></div>
+  </main>
+
+  <script src="js/sesion.js"></script>
+  <script src="js/api.js"></script>
+  <script src="js/ui.js"></script>
+  <script src="js/menu.js"></script>
+  <script src="js/moderacion.js"></script>
+</body>
+</html>
