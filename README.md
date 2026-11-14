@@ -26,11 +26,11 @@ El puerto **5173** y el host **localhost** se configuran en `.vscode/settings.js
 
 ### Usuarios de prueba
 
-Todos usan la clave `Kudos2026*`.
+Todos usan la clave `Kudos2026*`, excepto el Administrador, que usa `Kudos2026`.
 
 | Usuario | Correo | Rol |
 |---|---|---|
-| Laura Gómez | `laura.gomez@uco.edu.co` | Administrador |
+| Tomás Gallo | `tomas.gallo@uco.edu.co` | Administrador |
 | Carlos Restrepo | `carlos.restrepo@uco.edu.co` | Rector |
 
 ## Páginas
