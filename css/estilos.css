@@ -136,3 +136,98 @@ button.secundario {
   text-decoration: none;
   font-weight: bold;
 }
+
+textarea {
+  min-height: 70px;
+  resize: vertical;
+}
+
+button.pequeno {
+  margin: 6px 6px 0 0;
+  padding: 5px 10px;
+  font-size: 13px;
+}
+
+button.peligro {
+  background: #9b1c1c;
+}
+
+.publicacion {
+  background: #fff;
+  border: 1px solid #ddd;
+  border-left: 4px solid #0b3d62;
+  border-radius: 6px;
+  padding: 14px;
+  margin-bottom: 12px;
+}
+
+.respuestas {
+  margin-left: 28px;
+  margin-top: 10px;
+}
+
+.encabezado {
+  font-size: 13px;
+  color: #555;
+  margin-bottom: 6px;
+}
+
+.contenido {
+  white-space: pre-wrap;
+  margin: 6px 0;
+}
+
+.etiqueta {
+  display: inline-block;
+  padding: 2px 8px;
+  border-radius: 10px;
+  background: #e7f1fb;
+  color: #0b3d62;
+  font-size: 12px;
+  margin-left: 6px;
+}
+
+.etiqueta.alerta {
+  background: #fbebeb;
+  color: #9b1c1c;
+}
+
+.formulario-linea {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+  flex-wrap: wrap;
+  margin-top: 8px;
+}
+
+.formulario-linea select,
+.formulario-linea input {
+  width: auto;
+}
+
+.formulario-linea button {
+  margin-top: 0;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  background: #fff;
+  font-size: 14px;
+}
+
+th,
+td {
+  border: 1px solid #ddd;
+  padding: 8px;
+  text-align: left;
+  vertical-align: top;
+}
+
+th {
+  background: #f0efec;
+}
+
+.no-leida {
+  font-weight: bold;
+}

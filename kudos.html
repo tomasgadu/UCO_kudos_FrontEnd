@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>UCO Kudos - Kudos</title>
+  <link rel="stylesheet" href="css/estilos.css">
+</head>
+<body>
+  <header>
+    <h1>UCO Kudos</h1>
+    <nav id="menu"></nav>
+  </header>
+
+  <main>
+    <section class="tarjeta">
+      <h2>Dar un Kudo</h2>
+      <form id="formKudo">
+        <label for="destinatario">Destinatario</label>
+        <select id="destinatario" required></select>
+
+        <label for="categoria">Categoría</label>
+        <select id="categoria" required></select>
+
+        <label for="contenido">Reconocimiento</label>
+        <textarea id="contenido" maxlength="1000" required></textarea>
+
+        <button type="submit">Publicar Kudo</button>
+      </form>
+      <div id="mensaje" class="mensaje oculto"></div>
+    </section>
+
+    <section class="tarjeta">
+      <h2>Muro de Kudos</h2>
+      <div class="formulario-linea">
+        <label for="filtroDestinatario">Ver los Kudos de</label>
+        <select id="filtroDestinatario"></select>
+      </div>
+    </section>
+    <div id="muro"></div>
+  </main>
+
+  <script src="js/sesion.js"></script>
+  <script src="js/api.js"></script>
+  <script src="js/ui.js"></script>
+  <script src="js/menu.js"></script>
+  <script src="js/kudos.js"></script>
+</body>
+</html>
