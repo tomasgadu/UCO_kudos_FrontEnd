@@ -45,7 +45,7 @@ async function decidir(idSolicitud, decision, observacion) {
   try {
     const respuesta = await api.post("/solicitudes/" + idSolicitud + "/" + decision, { observacion: observacion.trim() || null });
     mostrarMensaje("mensaje", respuesta.mensajes.join(" "), false);
-    cargarSolicitudes();
+    void cargarSolicitudes();
   } catch (error) {
     mostrarMensaje("mensaje", error.message, true);
   }

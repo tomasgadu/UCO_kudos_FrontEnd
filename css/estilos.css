@@ -231,3 +231,7 @@ th {
 .no-leida {
   font-weight: bold;
 }
+
+.formulario-linea label {
+  margin: 0;
+}

@@ -51,14 +51,14 @@ function crearTarjetaReporte(reporte) {
 }
 
 function decidir(idReporte, decision, observacion) {
-  ejecutar(() => api.post("/reportes/" + idReporte + "/" + decision, { observacion: observacion.trim() }));
+  void ejecutar(() => api.post("/reportes/" + idReporte + "/" + decision, { observacion: observacion.trim() }));
 }
 
 async function ejecutar(accion) {
   try {
     const respuesta = await accion();
     mostrarMensaje("mensaje", respuesta.mensajes.join(" "), false);
-    cargarReportes();
+    void cargarReportes();
   } catch (error) {
     mostrarMensaje("mensaje", error.message, true);
   }

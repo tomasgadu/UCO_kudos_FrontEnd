@@ -131,7 +131,7 @@ async function ejecutarAccion(accion) {
   try {
     const respuesta = await accion();
     mostrarMensaje("mensaje", respuesta.mensajes.join(" "), false);
-    cargarConversacion();
+    void cargarConversacion();
   } catch (error) {
     mostrarMensaje("mensaje", error.message, true);
   }
@@ -139,15 +139,15 @@ async function ejecutarAccion(accion) {
 }
 
 function responder(idPadre, contenido) {
-  ejecutarAccion(() => api.post("/replicas", { idPadre: idPadre, contenido: contenido.trim() }));
+  void ejecutarAccion(() => api.post("/replicas", { idPadre: idPadre, contenido: contenido.trim() }));
 }
 
 function calificar(idPublicacion, estrellas) {
-  ejecutarAccion(() => api.put("/publicaciones/" + idPublicacion + "/calificacion", { estrellas: Number(estrellas) }));
+  void ejecutarAccion(() => api.put("/publicaciones/" + idPublicacion + "/calificacion", { estrellas: Number(estrellas) }));
 }
 
 function reportar(idPublicacion, motivo, descripcion) {
-  ejecutarAccion(() => api.post("/publicaciones/" + idPublicacion + "/reportes", { motivo: motivo || null, descripcion: descripcion.trim() || null }));
+  void ejecutarAccion(() => api.post("/publicaciones/" + idPublicacion + "/reportes", { motivo: motivo || null, descripcion: descripcion.trim() || null }));
 }
 
 function vetar(idPublicacion) {
@@ -155,7 +155,7 @@ function vetar(idPublicacion) {
   if (justificacion === null) {
     return;
   }
-  ejecutarAccion(() => api.post("/publicaciones/" + idPublicacion + "/veto", { justificacion: justificacion.trim() }));
+  void ejecutarAccion(() => api.post("/publicaciones/" + idPublicacion + "/veto", { justificacion: justificacion.trim() }));
 }
 
 document.addEventListener("DOMContentLoaded", cargarConversacion);

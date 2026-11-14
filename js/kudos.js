@@ -60,7 +60,7 @@ async function darKudo(evento) {
     const respuesta = await api.post("/kudos", datos);
     mostrarMensaje("mensaje", respuesta.mensajes.join(" "), false);
     document.getElementById("formKudo").reset();
-    cargarMuro();
+    void cargarMuro();
   } catch (error) {
     mostrarMensaje("mensaje", error.message, true);
   }
@@ -70,5 +70,5 @@ document.getElementById("formKudo").addEventListener("submit", darKudo);
 document.getElementById("filtroDestinatario").addEventListener("change", cargarMuro);
 document.addEventListener("DOMContentLoaded", async () => {
   await cargarListas();
-  cargarMuro();
+  void cargarMuro();
 });

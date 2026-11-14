@@ -36,6 +36,7 @@
     <section id="seccionFacultades" class="tarjeta oculto">
       <h2>Facultades</h2>
       <form id="formFacultad" class="formulario-linea">
+        <label for="nombreFacultad">Nombre</label>
         <input type="text" id="nombreFacultad" placeholder="Nombre de la facultad" required>
         <button type="submit">Registrar facultad</button>
       </form>
@@ -48,7 +49,9 @@
     <section id="seccionProgramas" class="tarjeta oculto">
       <h2>Programas académicos</h2>
       <form id="formPrograma" class="formulario-linea">
+        <label for="nombrePrograma">Nombre</label>
         <input type="text" id="nombrePrograma" placeholder="Nombre del programa" required>
+        <label for="facultadPrograma">Facultad</label>
         <select id="facultadPrograma" required></select>
         <button type="submit">Registrar programa</button>
       </form>

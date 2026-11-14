@@ -45,13 +45,13 @@ async function guardarCategoria(evento) {
   const datos = { nombre: valorDe("nombreCategoria"), descripcion: valorDe("descripcionCategoria") };
   if (await ejecutar(() => (id ? api.put("/categorias/" + id, datos) : api.post("/categorias", datos)))) {
     limpiarFormularioCategoria();
-    cargarCategorias();
+    void cargarCategorias();
   }
 }
 
 async function cambiarEstadoCategoria(id, accion) {
   await ejecutar(() => api.patch("/categorias/" + id + "/" + accion));
-  cargarCategorias();
+  void cargarCategorias();
 }
 
 async function cargarFacultades() {
@@ -77,7 +77,7 @@ async function registrarFacultad(evento) {
   evento.preventDefault();
   if (await ejecutar(() => api.post("/facultades", { nombre: valorDe("nombreFacultad") }))) {
     document.getElementById("formFacultad").reset();
-    cargarFacultades();
+    void cargarFacultades();
   }
 }
 
@@ -103,7 +103,7 @@ async function registrarPrograma(evento) {
   const datos = { nombre: valorDe("nombrePrograma"), facultad: { id: valorDe("facultadPrograma") || null } };
   if (await ejecutar(() => api.post("/programas", datos))) {
     document.getElementById("formPrograma").reset();
-    cargarProgramas();
+    void cargarProgramas();
   }
 }
 
@@ -125,15 +125,15 @@ function iniciarAdministracion() {
     document.getElementById("seccionCategorias").classList.remove("oculto");
     document.getElementById("formCategoria").addEventListener("submit", guardarCategoria);
     document.getElementById("botonCancelar").addEventListener("click", limpiarFormularioCategoria);
-    cargarCategorias();
+    void cargarCategorias();
   }
   if (tienePermiso("GESTIONAR_ESTRUCTURA")) {
     document.getElementById("seccionFacultades").classList.remove("oculto");
     document.getElementById("seccionProgramas").classList.remove("oculto");
     document.getElementById("formFacultad").addEventListener("submit", registrarFacultad);
     document.getElementById("formPrograma").addEventListener("submit", registrarPrograma);
-    cargarFacultades();
-    cargarProgramas();
+    void cargarFacultades();
+    void cargarProgramas();
   }
 }
 

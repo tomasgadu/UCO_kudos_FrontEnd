@@ -27,7 +27,7 @@ function crearTarjetaNotificacion(notificacion) {
 async function marcarLeida(idNotificacion) {
   try {
     await api.patch("/notificaciones/" + idNotificacion + "/leida");
-    cargarNotificaciones();
+    void cargarNotificaciones();
   } catch (error) {
     mostrarMensaje("mensaje", error.message, true);
   }

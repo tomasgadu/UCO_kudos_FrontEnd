@@ -90,4 +90,4 @@ document.getElementById("rol").addEventListener("change", actualizarAmbito);
 document.getElementById("formRegistro").addEventListener("submit", registrar);
 document.getElementById("formVerificacion").addEventListener("submit", verificar);
 document.getElementById("botonReenviar").addEventListener("click", reenviar);
-cargarListas();
+void cargarListas();
